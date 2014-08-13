@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="pocketknife" default="jar">
+
+	<target name="jar" depends="compile">
+		<mkdir dir="dist" />
+		<jar destfile="dist/java_pocketknife.jar" basedir="bin">
+		</jar>
+	</target>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="bin" />
+		<javac srcdir="src" destdir="bin" includeantruntime="false">
+		</javac>
+	</target>
+
+	<target name="clean">
+		<delete dir="bin/**" />
+		<delete dir="dist/**" />
+	</target>
+
+</project>
